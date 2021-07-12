@@ -19,6 +19,7 @@ namespace Algorithm_Programs
                     }
                 }
             }
+            Console.WriteLine("*****INSERTION SORT*****");
             Display(arrayList);
         }
         //Swap List

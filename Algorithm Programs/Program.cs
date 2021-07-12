@@ -12,6 +12,8 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 1-to Calculate Permutation of a string");
             Console.WriteLine("Enter 2-to Perform Binary Search in a Word List");
             Console.WriteLine("Enter 3-to Perform Insertion Sort");
+            Console.WriteLine("Enter 4-to Perform Bubble Sort");
+
 
             int ch = Convert.ToInt32(Console.ReadLine());
             switch(ch)
@@ -48,6 +50,11 @@ namespace Algorithm_Programs
                 case 3:
                     List<int> arr = ArrayInput();
                     InsertionSort.InsertionSorting(arr);
+                    break;
+
+                case 4:
+                    List<int> buubleSort = ArrayInput();
+                    BubbleSort.BubbleSorting(buubleSort);
                     break;
             }
            
