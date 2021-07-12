@@ -15,7 +15,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 3-to Perform Insertion Sort");
             Console.WriteLine("Enter 4-to Perform Bubble Sort");
             Console.WriteLine("Enter 5-to Perform Merge Sort");
-
+            Console.WriteLine("Enter 6-Check Anagram or not");
 
             int ch = Convert.ToInt32(Console.ReadLine());
             switch(ch)
@@ -62,6 +62,9 @@ namespace Algorithm_Programs
                     List<int> mergeSort = ArrayInput();
                     mergeSort=MergeSorting.MergeSort(mergeSort);
                     InsertionSort.Display(mergeSort);
+                    break;
+                case 6:
+                    Anagram.CheckAnagram();
                     break;
             }
            

@@ -49,7 +49,8 @@ namespace Algorithm_Programs
             List<int> hi = new List<int>();
 
             int middle = unsorted.Count / 2;
-            for (int i = 0; i < middle; i++)  //Dividing the unsorted list
+            //Dividing the unsorted list
+            for (int i = 0; i < middle; i++)  
             {
                 lo.Add(unsorted[i]);
             }
