@@ -20,7 +20,7 @@ namespace Algorithm_Programs
                 }
             }
             Console.WriteLine("*****BUBBLE SORT*****");
-            InsertionSort.Display(arrayList);
+
         }
   
     }

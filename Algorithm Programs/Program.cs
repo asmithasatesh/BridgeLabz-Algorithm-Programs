@@ -6,6 +6,7 @@ namespace Algorithm_Programs
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Algorithm Programs!\n");
@@ -13,6 +14,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 2-to Perform Binary Search in a Word List");
             Console.WriteLine("Enter 3-to Perform Insertion Sort");
             Console.WriteLine("Enter 4-to Perform Bubble Sort");
+            Console.WriteLine("Enter 5-to Perform Merge Sort");
 
 
             int ch = Convert.ToInt32(Console.ReadLine());
@@ -55,6 +57,11 @@ namespace Algorithm_Programs
                 case 4:
                     List<int> buubleSort = ArrayInput();
                     BubbleSort.BubbleSorting(buubleSort);
+                    break;
+                case 5:
+                    List<int> mergeSort = ArrayInput();
+                    mergeSort=MergeSorting.MergeSort(mergeSort);
+                    InsertionSort.Display(mergeSort);
                     break;
             }
            
