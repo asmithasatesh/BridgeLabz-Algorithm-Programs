@@ -16,6 +16,8 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 4-to Perform Bubble Sort");
             Console.WriteLine("Enter 5-to Perform Merge Sort");
             Console.WriteLine("Enter 6-Check Anagram or not");
+            Console.WriteLine("Enter 7-Check Prime numbers in a given range");
+
 
             int ch = Convert.ToInt32(Console.ReadLine());
             switch(ch)
@@ -65,6 +67,13 @@ namespace Algorithm_Programs
                     break;
                 case 6:
                     Anagram.CheckAnagram();
+                    break;
+                case 7:
+                    Console.WriteLine("Enter Start range");
+                    int start = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter end range");
+                    int end = Convert.ToInt32(Console.ReadLine());
+                    PrimeCheck.PrimeChecker(start, end);
                     break;
             }
            
