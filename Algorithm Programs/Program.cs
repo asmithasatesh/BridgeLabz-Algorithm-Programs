@@ -16,7 +16,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 4-to Perform Bubble Sort");
             Console.WriteLine("Enter 5-to Perform Merge Sort");
             Console.WriteLine("Enter 6-Check Anagram or not");
-            Console.WriteLine("Enter 7-Check Prime numbers in a given range");
+            Console.WriteLine("Enter 7-Check Prime numbers in a given range and print anagram and Palindrome");
 
 
             int ch = Convert.ToInt32(Console.ReadLine());
