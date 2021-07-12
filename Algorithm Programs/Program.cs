@@ -11,6 +11,8 @@ namespace Algorithm_Programs
             Console.WriteLine("Welcome To Algorithm Programs!\n");
             Console.WriteLine("Enter 1-to Calculate Permutation of a string");
             Console.WriteLine("Enter 2-to Perform Binary Search in a Word List");
+            Console.WriteLine("Enter 3-to Perform Insertion Sort");
+
             int ch = Convert.ToInt32(Console.ReadLine());
             switch(ch)
             {
@@ -42,8 +44,27 @@ namespace Algorithm_Programs
                     wordList.Sort();
                     BinarySearchInList.BinarySearch(wordList);
                     break;
+
+                case 3:
+                    List<int> arr = ArrayInput();
+                    InsertionSort.InsertionSorting(arr);
+                    break;
             }
            
+        }
+
+        //Get integer List from user
+        public static List<int> ArrayInput()
+        {
+            Console.WriteLine("Enter the Array size");
+            int number = Convert.ToInt32(Console.ReadLine());
+            List<int> array= new List<int>();
+            while(number-- >0)
+            {
+                Console.WriteLine("Enter a number:");
+                array.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            return array;
         }
     }
 }
