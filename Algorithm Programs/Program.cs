@@ -18,7 +18,11 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 6-Check Anagram or not");
             Console.WriteLine("Enter 7-Check Prime numbers in a given range and print anagram and Palindrome");
 
-
+            //Creating generics Object for generic Class
+            BinarySearchInList<string> binarySearchInList = new BinarySearchInList<string>();
+            InsertionSort<int> insertion = new InsertionSort<int>();
+            BubbleSort<int> bubbleSort = new BubbleSort<int>();
+            MergeSorting<int> obj = new MergeSorting<int>();
             int ch = Convert.ToInt32(Console.ReadLine());
             switch(ch)
             {
@@ -48,22 +52,23 @@ namespace Algorithm_Programs
                     string txtpath= File.ReadAllText(@"D:\Assignments\Algorithm Programs\Algorithm Programs\WordList.txt");
                     List<string> wordList = new List<string>(txtpath.Split(" "));
                     wordList.Sort();
-                    BinarySearchInList.BinarySearch(wordList);
+                    binarySearchInList.BinarySearch(wordList);
                     break;
 
                 case 3:
                     List<int> arr = ArrayInput();
-                    InsertionSort.InsertionSorting(arr);
+                    insertion.InsertionSorting(arr);
                     break;
 
                 case 4:
                     List<int> buubleSort = ArrayInput();
-                    BubbleSort.BubbleSorting(buubleSort);
+                    bubbleSort.BubbleSorting(buubleSort);
                     break;
                 case 5:
                     List<int> mergeSort = ArrayInput();
-                    mergeSort=MergeSorting.MergeSort(mergeSort);
-                    InsertionSort.Display(mergeSort);
+                    mergeSort=obj.MergeSort(mergeSort);
+                    Console.WriteLine("*****BUBBLE SORT*****");
+                    insertion.Display(mergeSort);
                     break;
                 case 6:
                     Anagram.CheckAnagram();

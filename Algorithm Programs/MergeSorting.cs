@@ -5,17 +5,17 @@ using System.Text;
 
 namespace Algorithm_Programs
 {
-    class MergeSorting
+    class MergeSorting<T> where T : IComparable
     {
-        private static List<int> Merge(List<int> lo, List<int> hi)
+        private static List<T> Merge(List<T> lo, List<T> hi)
         {
-            List<int> result = new List<int>();
+            List<T> result = new List<T>();
 
             while (lo.Count > 0 || hi.Count > 0)
             {
                 if (lo.Count > 0 && hi.Count > 0)
                 {
-                    if (lo.First() <= hi.First()) 
+                    if (lo.First().CompareTo(hi.First())<0) 
                     {
                         result.Add(lo.First());
                         lo.Remove(lo.First());   
@@ -40,13 +40,13 @@ namespace Algorithm_Programs
             }
             return result;
         }
-        static public List<int> MergeSort(List<int> unsorted)
+        public List<T> MergeSort(List<T> unsorted)
         {
             if (unsorted.Count <= 1)
                 return unsorted;
 
-            List<int> lo = new List<int>();
-            List<int> hi = new List<int>();
+            List<T> lo = new List<T>();
+            List<T> hi = new List<T>();
 
             int middle = unsorted.Count / 2;
             //Dividing the unsorted list

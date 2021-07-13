@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Algorithm_Programs
 {
-    class InsertionSort
+    class InsertionSort<T> where T: IComparable
     {
         //Perform Insertion Sort
-        public static void InsertionSorting(List<int> arrayList)
+        public void InsertionSorting(List<T> arrayList)
         {
             for(int i=0;i<arrayList.Count-1;i++)
             {
                 for(int j=i+1;j>0;j--)
                 {
-                    if(arrayList[j-1]>arrayList[j])
+                    if(arrayList[j-1].CompareTo(arrayList[j])>0)
                     {
                         Swap(arrayList, j-1, j);
                     }
@@ -23,15 +23,15 @@ namespace Algorithm_Programs
             Display(arrayList);
         }
         //Swap List
-        public static List<int> Swap(List<int> arrayList,int j, int i)
+        public List<T> Swap(List<T> arrayList,int j, int i)
         {
-            int temp = arrayList[j];
+            T temp = arrayList[j];
             arrayList[j] = arrayList[i];
             arrayList[i] = temp;
             return arrayList;
         }
         //Display List
-        public static void Display(List<int> arrayList)
+        public void Display(List<T> arrayList)
         {
             for (int i = 0; i < arrayList.Count; i++)
             {

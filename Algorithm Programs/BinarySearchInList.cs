@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Algorithm_Programs
 {
-    class BinarySearchInList
+    class BinarySearchInList<T> where T : IComparable
     {
         //Check if a word is present in word List
-        public static void BinarySearch(List<string> wordList)
+        public void BinarySearch(List<T> wordList)
         {
             //Initialize Local Variables
             int mid,beg = 0;
