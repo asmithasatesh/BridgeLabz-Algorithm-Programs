@@ -18,6 +18,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 6-Check Anagram or not");
             Console.WriteLine("Enter 7-Check Prime numbers in a given range and print anagram and Palindrome");
             Console.WriteLine("Enter 10-to Play Guess a number!");
+            Console.WriteLine("Enter 11-Message Demonstartion using RegEx");
 
 
             //Creating generics Object for generic Class
@@ -99,6 +100,9 @@ namespace Algorithm_Programs
                 case 10:
                     GuessANumber obj1 = new GuessANumber();
                     obj1.ThinkANumber();
+                    break;
+                case 11:
+                    MessageDemonstartion.GetInput();
                     break;
             }
            
