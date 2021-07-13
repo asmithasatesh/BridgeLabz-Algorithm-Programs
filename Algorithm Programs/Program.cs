@@ -17,6 +17,8 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter 5-to Perform Merge Sort");
             Console.WriteLine("Enter 6-Check Anagram or not");
             Console.WriteLine("Enter 7-Check Prime numbers in a given range and print anagram and Palindrome");
+            Console.WriteLine("Enter 10-to Play Guess a number!");
+
 
             //Creating generics Object for generic Class
             BinarySearchInList<string> binarySearchInList = new BinarySearchInList<string>();
@@ -52,7 +54,21 @@ namespace Algorithm_Programs
                     string txtpath= File.ReadAllText(@"D:\Assignments\Algorithm Programs\Algorithm Programs\WordList.txt");
                     List<string> wordList = new List<string>(txtpath.Split(" "));
                     wordList.Sort();
-                    binarySearchInList.BinarySearch(wordList);
+
+                    //Get search word from user
+                    Console.WriteLine("Enter the word to be searched in list");
+                    string key = Console.ReadLine();
+                    string found=binarySearchInList.BinarySearch(wordList,key);
+                    if(found==key)
+                    {
+                        Console.WriteLine("Found word \"{0}\" in Text File!", key);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Word does not exist in Text File!");
+
+                    }
                     break;
 
                 case 3:
@@ -67,7 +83,7 @@ namespace Algorithm_Programs
                 case 5:
                     List<int> mergeSort = ArrayInput();
                     mergeSort=obj.MergeSort(mergeSort);
-                    Console.WriteLine("*****BUBBLE SORT*****");
+                    Console.WriteLine("*****MERGE SORT*****");
                     insertion.Display(mergeSort);
                     break;
                 case 6:
@@ -79,6 +95,10 @@ namespace Algorithm_Programs
                     Console.WriteLine("Enter end range");
                     int end = Convert.ToInt32(Console.ReadLine());
                     PrimeCheck.PrimeChecker(start, end);
+                    break;
+                case 10:
+                    GuessANumber obj1 = new GuessANumber();
+                    obj1.ThinkANumber();
                     break;
             }
            

@@ -7,16 +7,12 @@ namespace Algorithm_Programs
     class BinarySearchInList<T> where T : IComparable
     {
         //Check if a word is present in word List
-        public void BinarySearch(List<T> wordList)
+        public T BinarySearch(List<T> wordList,T key)
         {
             //Initialize Local Variables
             int mid,beg = 0;
             int end = wordList.Count - 1;
             bool found = false;
-
-            //Get search word from user
-            Console.WriteLine("Enter the word to be searched in list");
-            string key = Console.ReadLine();
 
             while (beg<=end)
             {
@@ -24,7 +20,6 @@ namespace Algorithm_Programs
                 int flag = key.CompareTo(wordList[mid]);
                 if (flag == 0)
                 {
-                    Console.WriteLine("Found word \"{0}\" in Text File!", key);
                     found = true;
                     break;
                 }
@@ -39,7 +34,11 @@ namespace Algorithm_Programs
             }
             if(!found)
             {
-                Console.WriteLine("Word does not exist in Text File!");
+                return default;
+            }
+            else
+            {
+                return key;
             }
           
         }
