@@ -36,19 +36,6 @@ namespace Algorithm_Programs
 
                     Console.WriteLine("Permutation through Recursion Method");
                     Permutation.RecursivePermutation(str, 0, n - 1);
-
-                    Console.WriteLine("\nPermutation through Iteration Method");
-                    Permutation.IterativePermutation(str, n);
-
-                    if(Permutation.recursiveList == Permutation.iterativeList)
-                    {
-                        Console.WriteLine("Both recursive and Iterative Method yield same array!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Both recursive and Iterative Method yield different array!");
-
-                    }
                     break;
 
                 case 2:
