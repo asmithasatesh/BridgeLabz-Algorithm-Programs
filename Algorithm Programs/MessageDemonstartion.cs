@@ -15,10 +15,10 @@ namespace Algorithm_Programs
 
         public static string RegExFunction(string statement1)
         {
-            string namePattern = "^[<]*name[>]*";
-            string fullnamePatter = "[<]*fullname[>]*";
-            string numberpatter = "[x]*";
-            string dateTime = "^[xx][/][xx][/][xxxx]$";
+            string namePattern = "^[<]{2}name[>]{2}$";
+            string fullnamePatter = "[<]{2}fullname[>]{2}$";
+            string numberpatter = "[x]{10}";
+            string dateTime = "^[x]{2}[/]{1}[x]{2}[/]{1}[x]{4}$";
             Regex regexname = new Regex(namePattern);
             Regex fullname = new Regex(fullnamePatter);
             Regex numberpattern = new Regex(numberpatter);
@@ -44,7 +44,7 @@ namespace Algorithm_Programs
                 statement1 = statement1.Replace("xxxxxxxxxx", Console.ReadLine());
 
             }
-            if (numberpattern.IsMatch("xx/xx/xxxx"))
+            if (datetime.IsMatch("xx/xx/xxxx"))
             {
                 string date = DateTime.UtcNow.ToString("MM/dd/yyyy");
 

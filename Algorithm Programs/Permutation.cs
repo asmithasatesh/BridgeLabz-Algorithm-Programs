@@ -37,48 +37,6 @@ namespace Algorithm_Programs
             string s = new string(charArray);
             return s;
         }
-
-        //Permutation through iteration
-        public static void IterativePermutation(string str, int n)
-        {
-            char[] arr = str.ToCharArray();
-            Array.Sort(arr);
-            string s= String.Join("", arr);
-
-            while (true)
-            {
-                Console.WriteLine(s);
-
-                iterativeList.Add(s);
-                int i = n - 1;
-                while (s[i - 1] >= s[i])
-                {
-                    if (--i == 0)
-                    {
-                        return;
-                    }
-                }
-                int j = n - 1;
-                while (j > i && s[j] <= s[i - 1])
-                {
-                    j--;
-                }
-                s=swap(s,i - 1, j);
-                s=reverse(s,i);
-
-            }
-        }
-        public static string reverse(string str,int k)
-        {
-            char[] chars = str.ToCharArray();
-            for (int i = k, j = str.Length - 1; i < j; i++, j--)
-            {
-                char c = chars[i];
-                chars[i] = chars[j];
-                chars[j] = c;
-            }
-            return new string(chars);
-        }
     }
 }
 
